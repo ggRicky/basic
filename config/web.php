@@ -1,7 +1,6 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
-$db = require(__DIR__ . '/db.php');
 
 $config = [
     'id' => 'basic',
@@ -10,11 +9,15 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'V3EdFYUl-YMeg0ab0oL5SDnnrUJeuM_T',
+            'cookieValidationKey' => '2ydHEAPUDNIBEdO9Bv2htADv-QU6C1pT',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'assetManager' => array(
+            //'linkAssets' => true,
+            'forceCopy' => YII_ENV_DEV ? true : false,
+        ),
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
@@ -24,11 +27,10 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            'viewPath' => '@common/mail',
+            'useFileTransport' => false,
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => false,
 
             // 2017-09-15 : Práctica Tutorial Yii2 No 13. SwiftMailer
             // Configuraciónde la cuenta que permitirá el transporte
@@ -37,7 +39,7 @@ $config = [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
                 'username' => 'ricardogg67@gmail.com',
-                'password' => 'VillaCatania',
+                'password' => 'aNcoNaVCaTania13',
                 'port' => '587',
                 'encryption' => 'tls',
             ],
@@ -51,32 +53,35 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
-        /*
+        'db' => require(__DIR__ . '/db.php'),
+
+        // 2017-10-24 Forma alternativa : 'db' => $db,
+
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'showScriptName' => true,
             'rules' => [
             ],
         ],
-        */
+
     ],
     'params' => $params,
 ];
+
 
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
+        // uncomment the following to add your IP if you are not connecting fro$
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
+        // uncomment the following to add your IP if you are not connecting fro$
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 }

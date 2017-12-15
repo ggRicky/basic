@@ -1,13 +1,29 @@
 <?php
 
-/* @var $this yii\web\View */
+/* @var $this \yii\web\View */
+/* @var $content string */
 
-/* $this->title = 'My Yii Application'; */
-$this->title = 'Yii Basic Template Application 2017-12-12 18:55 HRS.';
+use yii\helpers\Html;
+
 $asset = app\assets\AppAsset::register($this);
 $baseUrl = $asset->baseUrl;
 
 ?>
+
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+<head>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
+</head>
+<body>
+<?php $this->beginBody() ?>
+
 <!-- Navigation -->
 <!-- Open menu button -->
 <a id="menu-toggle" href="#" class="btn btn-dark btn-lg btn-toggle"><i class="fa fa-bars"></i></a>
@@ -305,7 +321,7 @@ $baseUrl = $asset->baseUrl;
         <div class="modal-content modal-backdrop">
 
             <!-- Modal Header -->
-            <div class="modal-shadow-effect modal-header-water-mark">
+            <div class="modal-shadow-effect">
                 <div class="modal-header modal-header-config ctt-modal-header-info">
                     <div class="row">
                         <!--
@@ -316,7 +332,7 @@ $baseUrl = $asset->baseUrl;
                              ctt-modal-header-error       glyphicon-exclamation-sign
                         -->
                         <div class="col-sm-1"><span class="glyphicon glyphicon-info-sign"></span></div>
-                        <div class="col-sm-7"><h4 class="modal-title">Información</h4></div>
+                        <div class="col-sm-7"><h4 class="modal-title">Informacion</h4></div>
                         <div class="col-sm-4"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
                     </div>
                 </div>
@@ -348,7 +364,7 @@ $baseUrl = $asset->baseUrl;
         <div class="modal-content modal-backdrop">
 
             <!-- Modal Header -->
-            <div class="modal-shadow-effect modal-header-water-mark">
+            <div class="modal-shadow-effect">
                 <div class="modal-header modal-header-config ctt-modal-header-warning">
                     <div class="row">
                         <!--
@@ -391,7 +407,7 @@ $baseUrl = $asset->baseUrl;
         <div class="modal-content modal-backdrop">
 
             <!-- Modal Header -->
-            <div class="modal-shadow-effect modal-header-water-mark">
+            <div class="modal-shadow-effect">
                 <div class="modal-header modal-header-config ctt-modal-header-error">
                     <div class="row">
                         <!--
@@ -434,7 +450,7 @@ $baseUrl = $asset->baseUrl;
         <div class="modal-content modal-backdrop">
 
             <!-- Modal Header -->
-            <div class="modal-shadow-effect modal-header-water-mark">
+            <div class="modal-shadow-effect">
                 <div class="modal-header modal-header-config ctt-modal-header-success">
                     <div class="row">
                         <!--
@@ -477,7 +493,7 @@ $baseUrl = $asset->baseUrl;
         <div class="modal-content modal-backdrop">
 
             <!-- Modal Header -->
-            <div class="modal-shadow-effect modal-header-water-mark">
+            <div class="modal-shadow-effect">
                 <div class="modal-header modal-header-config ctt-modal-header-question">
                     <div class="row">
                         <!--
@@ -511,3 +527,8 @@ $baseUrl = $asset->baseUrl;
 
     </div>
 </div>
+
+<?php $this->endBody() ?>
+</body>
+</html>
+<?php $this->endPage() ?>

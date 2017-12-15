@@ -2,8 +2,8 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'pgsql:host=localhost;dbname=cttwapp_db',
-    'username' => 'cttwapp_usr',
-    'password' => 'cttwapp2017',
+    'dsn' => 'pgsql:host=localhost;dbname=yii_db',
+    'username' => 'yii_user',
+    'password' => '031067',
     'charset' => 'utf8',
 ];
