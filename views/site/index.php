@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Url;
+
 /* @var $this yii\web\View */
 
 /* $this->title = 'My Yii Application'; */
@@ -28,7 +30,7 @@ $baseUrl = $asset->baseUrl;
         </li>
         <!-- Content menu -->
         <li>
-            <a href="/site/about">Acerca</a>
+            <?php echo "<a href='" . Url::to(['site/about']) . "'>Acerca</a>"; ?>
         </li>
         <li>
             <a href="#services">Clientes</a>
