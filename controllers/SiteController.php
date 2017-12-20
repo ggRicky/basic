@@ -1146,4 +1146,16 @@ class SiteController extends Controller
     }
 
 
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionClientes()
+    {
+        return $this->render('ctt-clientes');
+    }
+
+
+
 }

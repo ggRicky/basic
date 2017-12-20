@@ -4,11 +4,12 @@ use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 
-$this->title = 'About';
+$this->title = 'Clientes';
 $asset = app\assets\AppAsset::register($this);
 $baseUrl = $asset->baseUrl;
 
 ?>
+
 <!-- Navigation -->
 <!-- Open menu button -->
 <a id="menu-toggle" href="#" class="btn btn-dark btn-lg btn-toggle"><i class="fa fa-bars"></i></a>
@@ -22,14 +23,15 @@ $baseUrl = $asset->baseUrl;
         <!-- CTT mini-logo ribbon -->
         <div class="container-fluid ctt-mini-logo-top">
             <img src="<?=$baseUrl?>/img/ctt-mini-logo_1.jpg" class="pull-left img-responsive" height="42" width="105"/>
+
         </div>
         <!-- Menu title -->
         <li class="sidebar-brand">
-            <a href="#top">Acerca</a>
+            <a href="#top">Clientes</a>
         </li>
         <!-- Content menu -->
         <li>
-            <?php echo "<a href='" . Url::to(['site/index']) . "'>Regresar</a>"; ?>
+            <a href="/site/index">Inicio</a>
         </li>
         <li>
             <a href="#">Ayuda</a>
@@ -41,11 +43,13 @@ $baseUrl = $asset->baseUrl;
 <header id="top">
     <div class="row"> <!-- Bootstrap's row -->
         <div class="col-lg-12"> <!-- Bootstrap's col -->
-            <!-- Parallax Efect -->
-            <div id="parallax2" class="parallax-section" data-stellar-background-ratio="0.5">
-                <div class="row"></div>
+            <div class="ctt-mask-1">  <!-- Blue mask over CDMX video -->
+                <!-- Video settings to autoplay and infinite loop -->
+                <video class="crop-video" poster="<?=$baseUrl?>/img/poster_1.jpg" autoplay loop>
+                    <source src="<?=$baseUrl?>/mov/ctt-grua.webm" type="video/webm">  <!-- The webm video format is the best for high performance downloads -->
+                </video>
             </div>
-            <!-- CTT logo to display over the parallax efect with opacity level -->
+            <!-- CTT logo to display over the CTT's crane video with opacity level -->
             <img src="<?=$baseUrl?>/img/ctt-logo_1.png" class="ctt-logo">
         </div>
     </div>
@@ -71,14 +75,14 @@ $baseUrl = $asset->baseUrl;
     <!-- Yii2 Title layout -->
     <div class="row">
         <div class="col-lg-10 yii2-header">
-            <p>CTT Web Application v-1.0</p>
+            <p>Clientes</p>
         </div>
     </div>
 
     <!-- Yii2 complementary description -->
     <div class="row">
         <div class="col-lg-10 text-info yii2-description">
-            <p>Sistema Gestor de Operaciones</p>
+            <p>Módulo</p>
         </div>
     </div>
 
