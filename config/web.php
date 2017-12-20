@@ -15,8 +15,8 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'assetManager' => array(
-            //'linkAssets' => true,
-            'forceCopy' => YII_ENV_DEV ? true : false,
+            'linkAssets' => true,
+            //'forceCopy' => YII_ENV_DEV ? true : false,
         ),
         'user' => [
             'identityClass' => 'app\models\User',
