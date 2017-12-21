@@ -26,7 +26,7 @@ $baseUrl = $asset->baseUrl;
         </div>
         <!-- Menu title -->
         <li class="sidebar-brand">
-            <a href="#top">Frontend</a>
+            <a href="#top"></a>
         </li>
         <!-- Content menu -->
         <li>
@@ -36,16 +36,16 @@ $baseUrl = $asset->baseUrl;
             <a href="/site/clientes">Clientes</a>
         </li>
         <li>
-            <a href="#ctt-portfolio">Catálogos</a>
+            <a href="#parallax1">Catálogos</a>
         </li>
         <li>
             <a href="#ctt-portfolio">Inventarios</a>
         </li>
         <li>
-            <a href="#ctt-portfolio">Proyectos</a>
+            <a href="#services">Proyectos</a>
         </li>
         <li>
-            <a href="#ctt-portfolio">Reservaciones</a>
+            <a href="#parallax1">Reservaciones</a>
         </li>
         <li>
             <a href="#ctt-portfolio">Cotizaciones</a>
