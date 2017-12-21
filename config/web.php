@@ -16,7 +16,8 @@ $config = [
         ],
         'assetManager' => array(
             //'linkAssets' => true,
-            'forceCopy' => YII_ENV_DEV ? true : false,
+            //'forceCopy' => YII_ENV_DEV ? true : false,
+            'forceCopy' => true,
         ),
         'user' => [
             'identityClass' => 'app\models\User',
