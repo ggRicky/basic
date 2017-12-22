@@ -46,7 +46,7 @@ $baseUrl = $asset->baseUrl;
             <div class="ctt-mask-1">  <!-- Blue mask over CDMX video -->
                 <!-- Video settings to autoplay and infinite loop -->
                 <video class="crop-video" poster="<?=$baseUrl?>/img/poster_1.jpg" autoplay loop>
-                    <source src="<?=$baseUrl?>/mov/ctt-cdmx.webm" type="video/webm">  <!-- The webm video format is the best for high performance downloads -->
+                    <source src="<?=$baseUrl?>/mov/ctt-grua-1.webm" type="video/webm">  <!-- The webm video format is the best for high performance downloads -->
                 </video>
             </div>
             <!-- CTT logo to display over the CTT's crane video with opacity level -->
