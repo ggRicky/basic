@@ -71,14 +71,14 @@ $baseUrl = $asset->baseUrl;
     <!-- Yii2 Title layout -->
     <div class="row">
         <div class="col-lg-10 yii2-header">
-            <p>CTT Web Application v-1.0</p>
+            <p>Acerca</p>
         </div>
     </div>
 
     <!-- Yii2 complementary description -->
     <div class="row">
         <div class="col-lg-10 text-info yii2-description">
-            <p>Sistema Gestor de Operaciones</p>
+            <p>CTT Web Application v-1.0/p>
         </div>
     </div>
 
