@@ -78,7 +78,7 @@ $baseUrl = $asset->baseUrl;
     <!-- Yii2 complementary description -->
     <div class="row">
         <div class="col-lg-10 text-info yii2-description">
-            <p>CTT Web Application v-1.0/p>
+            <p>CTT Web Application v-1.0</p>
         </div>
     </div>
 
